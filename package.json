@@ -1,0 +1,11 @@
+{
+  "name": "go-dark-erver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Mudassar755/go-dark-erver.git",
+  "author": "Mudassar755 <mudasar.se@gmail>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
