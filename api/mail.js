@@ -33,8 +33,8 @@ router.post(
         try {
             await mailService.sendEmail(
                 {
-                    to: process.env.USER,
-                    from: process.env.USER,
+                    to: process.env.EMAIL_TO,
+                    from: process.env.EMAIL_FROM,
                     replyTo: email,
                 },
                 {

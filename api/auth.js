@@ -165,7 +165,7 @@ router.post("/resetPassword", async (req, res) => {
       await mailService.sendEmail(
         {
           to: email,
-          from: process.env.USER
+          from: process.env.EMAIL_FROM
         },
         {
           subject: "Reset Password",

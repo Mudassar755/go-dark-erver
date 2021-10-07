@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
   host: "smtp.gmail.com",
   auth: {
-    user: process.env.USER,
+    user: process.env.EMAIL_FROM,
     pass: process.env.PASS,
   },
   secure: true,
@@ -22,10 +22,11 @@ const transporter = nodemailer.createTransport({
 //     pass: process.env.PASS,
 //   },
 // });
-
+// wapemma@yahoo.com
 exports.sendEmail = async (mailOptions, locals = {}, template = "") => {
   const { to, from, replyTo } = mailOptions;
   const {subject, message, html} = locals;
+  console.log("sdsdsdvsdvjndsv", mailOptions)
   await new Promise((resolve, reject) => {
     // verify connection configuration
     transporter.verify(function (error, success) {
