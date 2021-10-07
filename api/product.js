@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   try {
     res.json({
       status: 200,
-      message: "Get data successfully",
+      message: "Get data successfully hyjkmk l",
     });
   } catch (error) {
     console.error(error);
