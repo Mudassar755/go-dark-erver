@@ -23,7 +23,7 @@ const connectDB = require('./config/db');
 const app = express();
 // app.use(helmet())
 //Connect MongoDB
-connectDB();
+// connectDB();
 app.use(express.json({extended: false}))
 
 app.use("/api/auth", auth)
