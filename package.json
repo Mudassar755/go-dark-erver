@@ -1,10 +1,25 @@
 {
-  "name": "go-dark-erver",
+  "name": "express-vercel",
   "version": "1.0.0",
+  "description": "Deploy express js to vercel.",
   "main": "index.js",
-  "repository": "https://github.com/Mudassar755/go-dark-erver.git",
-  "author": "Mudassar755 <mudasar.se@gmail>",
-  "license": "MIT",
+  "engines": {
+    "node" : "14.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatuanem199801/express-vercel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hatuanem199801/express-vercel/issues"
+  },
+  "homepage": "https://github.com/hatuanem199801/express-vercel#readme",
   "dependencies": {
     "express": "^4.17.1"
   }

@@ -1,21 +1,10 @@
-const express = require('express')
-const auth = require("./api/auth")
-// const mail = require("./api/mail")
-// const connectDB = require('./config/db');
-// var cors = require("cors");
-// var helmet = require('helmet')
-// const dotenv = require("dotenv");
-
-// dotenv.config();
-
+const express = require("express");
 const app = express();
-// app.use(helmet())
-//Connect MongoDB
-// connectDB();
-app.use(express.json({extended: false}))
+const product = require("./api/product");
 
-app.use("/api/auth", auth)
-app.use("/api/mail", mail)
-const PORT = process.env.PORT || 5002;
+app.use(express.json({ extended: false }));
 
-app.listen(PORT, () => console.log(`Server is up and running on the port ${PORT}`));
+app.use("/api/product", product);
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
