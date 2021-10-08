@@ -13,17 +13,18 @@ const nodemailer = require("nodemailer");
 const router = express.Router();
 
 
-
-router.get('/', async (req, res) => {
+//@route   POST api/auth
+//@desc    Get User
+//@access  Private
+router.post("/", auth, async (req, res) => {
   try {
-      res.json({code:200, success: true})
-
+    const user = await User.findById(req.user.id).select("-password");
+    res.json(user);
   } catch (err) {
-      console.error(err.message);
-      res.status(500).send("Server error");
+    console.error(err.message);
+    res.status(500).send("Server Error");
   }
-
-})
+});
 //@route   POST api/auth/login
 //@desc    Authentication user & get Token
 //@access  Public
