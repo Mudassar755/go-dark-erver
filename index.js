@@ -13,7 +13,9 @@ const app = express();
 app.use(helmet())
 //Connect MongoDB
 connectDB();
-
+app.get("/", async (req, res) => {
+  res.status(200).send("App is RUnning Successfull")
+});
 var whitelist = ['http://localhost:3000']
 var corsOptions = {
     origin: function (origin, callback) {
